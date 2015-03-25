@@ -1,0 +1,80 @@
+<p>
+    En matemáticas y lógica matemática, el 
+    <a href="http://en.wikipedia.org/wiki/Boolean_algebra#Basic_operations">algebra booleana</a>
+    es una parte del algebra en la cual los valores de las variables son verdadero o falso, comunmente denotados
+    con 1 o 0 respectivamente. En vez del algebra elemental dónde los valores de las variables son números y las 
+    operaciones principales son adición y multiplicación, las operaciones principales del algebra booleana son la 
+    conjunción (denotado ∧), la disyunción (denotado ∨) y la negación (denotado ¬).
+</p>
+
+<p>
+    En esta misión debes implementar algunas operaciones booleanas:<br>
+    - <strong>"conjunction"</strong> (conjunción)
+    denotado x&nbsp;∧&nbsp;y, satisface x&nbsp;∧&nbsp;y = 1 si x = y = 1 y x&nbsp;∧&nbsp;y = 0 si no.<br>
+    - <strong>"disjunction"</strong> (disyunción)
+    denotado x&nbsp;∨&nbsp;y, satisface x&nbsp;∨&nbsp;y = 0 si x = y = 0 y x&nbsp;∨&nbsp;y = 1 si no.<br>
+    - <strong>"implication"</strong> (implicación material)
+    denotado x&rarr;y y puede ser descrito como ¬&nbsp;x&nbsp;∨&nbsp;y.
+    Si x es verdadera entonces el valor de x → y se toma como el de y.
+    Pero si x es falso entonces el valor de y puede ser ignorado; sin embargo la operación debe retornar algún valor
+    de verdad t sólo hay dos opciones. entonces el valor de retorno es el que implica menos, es decir, verdadera.<br>
+    - <strong>"exclusive"</strong> (o exclusivo)
+    denotado x&nbsp;⊕&nbsp;y y puede ser descrito como (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y).
+    Excluye la posibilidad de ambos x y y. Definido en términos aritméticos  es la adición módulo 2 dónde 1 + 1 =
+    0.<br>
+    - <strong>"equivalence"</strong> (equivalencia)
+    denotado x&nbsp;≡&nbsp;y y puede ser descrito como ¬&nbsp;(x&nbsp;⊕&nbsp;y).
+    Es verdadero sólo cuándo x y y tienen el mismo valor.<br>
+
+</p>
+
+<p>
+    Ésta es la taabla de verdad para esas operaciones:
+</p>
+<div style="text-align: center;">
+<pre>
+ x | y | x∧y | x∨y | x→y | x⊕y | x≡y |
+--------------------------------------
+ 0 | 0 |  0  |  0  |  1  |  0  |  1  |
+ 1 | 0 |  0  |  1  |  0  |  1  |  0  |
+ 0 | 1 |  0  |  1  |  1  |  1  |  0  |
+ 1 | 1 |  1  |  1  |  1  |  0  |  1  |
+--------------------------------------
+</pre>
+</div>
+
+<p>
+    Se te dan dos valores booleanos <strong>x</strong> y <strong>y</strong> como 1 o 0 y se te da un nombre de operación
+    como fue descrito anteriormente. Debes calcular el valor y retornarlo como 1 o 0.
+</p>
+<p>
+    <strong>Entrada: </strong> Tres argumentos. X y Y como  0 o 1. Un nombre de operación como una cadena de carácteres.
+</p>
+
+<p>
+    <strong>Salida: </strong> El resultado 1 o 0.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Ejemplo:</strong>
+    </p>
+    <pre class="brush: python">
+boolean(1, 0, "conjunction") == 0
+boolean(0, 1, "exclusive") == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Cómo se usa: </strong>
+    Con esto comprenderás como trabajar con valores y operaciones booleanos. Incluso podrás pensar en números cómo booleanos.
+
+</p>
+
+<p>
+    <strong>Precondición:</strong>
+    x in (0, 1)<br>
+    y in (0, 1)<br>
+    operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+</p>
