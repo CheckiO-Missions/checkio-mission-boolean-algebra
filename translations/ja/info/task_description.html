@@ -1,9 +1,7 @@
 <p>
-  数学と数学的論理で、
-    In mathematics and mathematical logic,
-    <a href="http://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%83%AB%E4%BB%A3%E6%95%B0#.E5.AE.9A.E7.BE.A9">ブール代数</a>
+  数学と数学的論理では <a href="http://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%83%AB%E4%BB%A3%E6%95%B0#.E5.AE.9A.E7.BE.A9">ブール代数</a>
     は代数の部分領域であり、変数の値が真(true)と偽(false)で一般的にそれぞれ1と0で示されます。
-    変数の値が数字で主な演算が加算と乗算である基本的な代数学の代わりに、ブール代数の主な演算は連結(conjunction) (∧で示される)と、分離(disjunction)(∨で示される)と否定(negation)(¬で示される)。
+    変数の値が数字で主な演算が加算と乗算である基本的な代数学の代わりに、ブール代数の主な演算は論理積(conjunction) (∧で示される)と、論理和(disjunction)(∨で示される)と否定(negation)(¬で示される)です。
 </p>
 
 <!-- <p>
@@ -17,15 +15,15 @@
 
 <p>
   このミッションではあなたはいくつかのブール演算を実装する必要があります。<br>
-    - <strong>連結 "conjunction"</strong>
-    x&nbsp;∧&nbsp;y で示され、 x = y = 1 の時は x&nbsp;∧&nbsp;y = 1 でそれ以外は x&nbsp;∧&nbsp;y = 0 を満たす。<br>
-    - <strong>分離 "disjunction"</strong>
-    x&nbsp;∨&nbsp;y で示され、x = y = 0 の時は x&nbsp;∨&nbsp;y = 0 でそれ以外は x&nbsp;∨&nbsp;y = 1 を満たす。<br>
+    - <strong>論理積 "conjunction"</strong>
+    x&nbsp;∧&nbsp;y で示され、 x = y = 1 の時は x&nbsp;∧&nbsp;y = 1 でそれ以外は x&nbsp;∧&nbsp;y = 0 を満たします。<br>
+    - <strong>論理和 "disjunction"</strong>
+    x&nbsp;∨&nbsp;y で示され、x = y = 0 の時は x&nbsp;∨&nbsp;y = 0 でそれ以外は x&nbsp;∨&nbsp;y = 1 を満たします。<br>
     - <strong>含意 "implication"</strong> (具象的含意)
-    x&rarr;y で示され ¬&nbsp;x&nbsp;∨&nbsp;y でも表せられます。もしxが真ならば、x → yはyの値です。xが偽ならばyの値は無視されるかもしれない、しかしながらこの演算は多少の真実の値を返さなくてはいけなくて2つの選択肢しかありません、なので返却値は必然的に少なくなり、はっきり言うと真です。<br>
+    x&rarr;y で示され ¬&nbsp;x&nbsp;∨&nbsp;y でも表せられます。もしxが真ならば、x → yはyの値です。xが偽ならばyの値は無視されるかもしれません、しかしながらこの演算は多少の真実の値を返さなくてはいけなくて2つの選択肢しかありません、なので返却値は必然的に少なくなり、はっきり言うと真です。<br>
     - <strong>排他 "exclusive"</strong> (排他的 or)
      x&nbsp;⊕&nbsp;y で示され、(x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y)でも表せられます。
-     それはxとy両方の可能性を排除します。算数の用語での定義では1+1=0のような足して2で割った余りです。<br>
+     それはxとy両方の可能性を排除します。算数の用語での定義では足して2で割った余りで、ここでは1+1=0になります。<br>
     - <strong>等価 "equivalence"</strong>
      x&nbsp;≡&nbsp;y で示され、¬&nbsp;(x&nbsp;⊕&nbsp;y)でも表せられます。xとyが同じ値を取る時だけ真になります。<br>
 
@@ -72,19 +70,19 @@
 </div>
 
 <p>
-    あなたは <strong>x</strong> と <strong>y</strong> の２つのブール値が1と0の値として与えられ、先ほど述べた演算の名前が与えられます。あなたはその値を計算し、1か0の値を返さなくてはいけません。
+    あなたには <strong>x</strong> と <strong>y</strong> の2つのブール値が1と0の値として与えられ、先ほど述べた演算の名前が与えられます。あなたはその値を計算し、1か0の値を返さなくてはいけません。
 </p>
 <!-- <p>
     You are given two boolean values <strong>x</strong> and <strong>y</strong> as 1 or 0 and you are given an operation
     name as described earlier. You should calculate the value and return it as 1 or 0.
 </p> -->
 <p>
-    <strong>入力 </strong> 3つの引数。XとYが0または1で与えられ、演算名が文字列で与えられます。
+    <strong>入力 </strong> 3つの引数。XとYが0か1で与えられ、演算名が文字列で与えられます。
     <!-- <strong>Input </strong> Three arguments. X and Y as 0 or 1. An operation name as a string. -->
 </p>
 
 <p>
-    <strong>出力 </strong> 結果を1または0で出力します。
+    <strong>出力 </strong> 結果を1か0で出力します。
 </p>
 
 
@@ -100,7 +98,7 @@ boolean(0, 1, "exclusive") == 1
 
 <p class="for_info_only">
     <strong>どうやって使われるか </strong>
-    ここではブール値と演算がどうやって扱われるかを学ぶでしょう。ブール値としての数字についても考え始めることでしょう。
+    ここではブール値と演算がどうやって扱われるかを学ぶでしょう。ブール値としての数字についても考えることになるでしょう。
 </p>
 <!-- <p class="for_info_only">
     <strong>How it is used: </strong>
