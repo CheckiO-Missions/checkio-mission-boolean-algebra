@@ -1,0 +1,114 @@
+<p>
+  数学と数学的論理では <a href="http://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%83%AB%E4%BB%A3%E6%95%B0#.E5.AE.9A.E7.BE.A9">ブール代数</a>
+    は代数の部分領域であり、変数の値が真(true)と偽(false)で一般的にそれぞれ1と0で示されます。
+    変数の値が数字で主な演算が加算と乗算である基本的な代数学の代わりに、ブール代数の主な演算は論理積(conjunction) (∧で示される)と、論理和(disjunction)(∨で示される)と否定(negation)(¬で示される)です。
+</p>
+
+<!-- <p>
+    In mathematics and mathematical logic,
+    <a href="http://en.wikipedia.org/wiki/Boolean_algebra#Basic_operations">Boolean algebra</a>
+    is a sub-area of algebra in which the values of the variables are true or false, typically denoted with 1 or 0
+    respectively. Instead of elementary algebra where the values of the variables are numbers and the main operations
+    are addition and multiplication, the main operations of Boolean algebra are the conjunction (denoted ∧), the
+    disjunction (denoted ∨) and the negation (denoted ¬).
+</p> -->
+
+<p>
+  このミッションではあなたはいくつかのブール演算を実装する必要があります。<br>
+    - <strong>論理積 "conjunction"</strong>
+    x&nbsp;∧&nbsp;y で示され、 x = y = 1 の時は x&nbsp;∧&nbsp;y = 1 でそれ以外は x&nbsp;∧&nbsp;y = 0 を満たします。<br>
+    - <strong>論理和 "disjunction"</strong>
+    x&nbsp;∨&nbsp;y で示され、x = y = 0 の時は x&nbsp;∨&nbsp;y = 0 でそれ以外は x&nbsp;∨&nbsp;y = 1 を満たします。<br>
+    - <strong>含意 "implication"</strong> (具象的含意)
+    x&rarr;y で示され ¬&nbsp;x&nbsp;∨&nbsp;y でも表せられます。もしxが真ならば、x → yはyの値です。xが偽ならばyの値は無視されるかもしれません、しかしながらこの演算は多少の真実の値を返さなくてはいけなくて2つの選択肢しかありません、なので返却値は必然的に少なくなり、はっきり言うと真です。<br>
+    - <strong>排他 "exclusive"</strong> (排他的 or)
+     x&nbsp;⊕&nbsp;y で示され、(x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y)でも表せられます。
+     それはxとy両方の可能性を排除します。算数の用語での定義では足して2で割った余りで、ここでは1+1=0になります。<br>
+    - <strong>等価 "equivalence"</strong>
+     x&nbsp;≡&nbsp;y で示され、¬&nbsp;(x&nbsp;⊕&nbsp;y)でも表せられます。xとyが同じ値を取る時だけ真になります。<br>
+
+</p>
+
+<!--
+<p>
+    In this mission you should implement some boolean operations:<br>
+    - <strong>"conjunction"</strong>
+    denoted x&nbsp;∧&nbsp;y, satisfies x&nbsp;∧&nbsp;y = 1 if x = y = 1 and x&nbsp;∧&nbsp;y = 0 otherwise.<br>
+    - <strong>"disjunction"</strong>
+    denoted x&nbsp;∨&nbsp;y, satisfies x&nbsp;∨&nbsp;y = 0 if x = y = 0 and x&nbsp;∨&nbsp;y = 1 otherwise.<br>
+    - <strong>"implication"</strong> (material implication)
+    denoted x&rarr;y and can be described as ¬&nbsp;x&nbsp;∨&nbsp;y.
+    If x is true then the value of x → y is taken to be that of y.
+    But if x is false then the value of y can be ignored; however the operation must return
+    some truth value and there are only two choices, so the return value is the one that entails less, namely true.<br>
+    - <strong>"exclusive"</strong> (exclusive or)
+    denoted x&nbsp;⊕&nbsp;y and can be described as (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y).
+    It excludes the possibility of both x and y. Defined in terms of arithmetic it is addition mod 2 where 1 + 1 =
+    0.<br>
+    - <strong>"equivalence"</strong>
+    denoted x&nbsp;≡&nbsp;y and can be described as ¬&nbsp;(x&nbsp;⊕&nbsp;y).
+    It's true just when x and y have the same value.<br>
+
+</p> -->
+
+<p>
+    これらの演算の真の表は以下のようになります。
+</p>
+<!-- <p>
+    Here you can see the truth table for these operations:
+</p> -->
+<div style="text-align: center;">
+<pre>
+ x | y | x∧y | x∨y | x→y | x⊕y | x≡y |
+--------------------------------------
+ 0 | 0 |  0  |  0  |  1  |  0  |  1  |
+ 1 | 0 |  0  |  1  |  0  |  1  |  0  |
+ 0 | 1 |  0  |  1  |  1  |  1  |  0  |
+ 1 | 1 |  1  |  1  |  1  |  0  |  1  |
+--------------------------------------
+</pre>
+</div>
+
+<p>
+    あなたには <strong>x</strong> と <strong>y</strong> の2つのブール値が1と0の値として与えられ、先ほど述べた演算の名前が与えられます。あなたはその値を計算し、1か0の値を返さなくてはいけません。
+</p>
+<!-- <p>
+    You are given two boolean values <strong>x</strong> and <strong>y</strong> as 1 or 0 and you are given an operation
+    name as described earlier. You should calculate the value and return it as 1 or 0.
+</p> -->
+<p>
+    <strong>入力 </strong> 3つの引数。XとYが0か1で与えられ、演算名が文字列で与えられます。
+    <!-- <strong>Input </strong> Three arguments. X and Y as 0 or 1. An operation name as a string. -->
+</p>
+
+<p>
+    <strong>出力 </strong> 結果を1か0で出力します。
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例</strong>
+    </p>
+    <pre class="brush: python">
+boolean(1, 0, "conjunction") == 0
+boolean(0, 1, "exclusive") == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>どうやって使われるか </strong>
+    ここではブール値と演算がどうやって扱われるかを学ぶでしょう。ブール値としての数字についても考えることになるでしょう。
+</p>
+<!-- <p class="for_info_only">
+    <strong>How it is used: </strong>
+    Here you will learn how to work with boolean values and operators. You even get to think about numbers as booleans.
+
+</p> -->
+
+<p>
+    <strong>事前条件</strong>
+    x in (0, 1)<br>
+    y in (0, 1)<br>
+    operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+</p>
