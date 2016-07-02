@@ -1,0 +1,82 @@
+<p>
+    In matematica ed in logica matematica l'
+    <a href="https://it.wikipedia.org/wiki/Algebra_di_Boole#Operatori_booleani">algebra Booleana</a>
+    &egrave; una branca dell'algebra in cui i valori della variabili sono vero o falso, tipicamente denotati rispettivamente
+    da 1 o 0. Mentre nell'algebra elementare i valori delle variabili sono numeri e le operazioni principali sono
+    addizione e moltiplicazione, nell'algebra Booleana le operazioni principali sono la congiunzione (denotata &and;),
+    la disgiunzione (denotata &or;) e la negazione (denotata &not;).
+</p>
+
+<p>
+    In questa missione devi implementare alcune operazioni booleane:<br>
+    - <strong>"conjunction"</strong> (congiunzione)
+    denotata x&nbsp;&and;&nbsp;y, soddisfa x&nbsp;&and;&nbsp;y = 1 se x = y = 1 ed x&nbsp;&and;&nbsp;y = 0 altrimenti.<br>
+    - <strong>"disjunction"</strong> (disgiunzione)
+    denotata x&nbsp;&or;&nbsp;y, soddisfa x&nbsp;&or;&nbsp;y = 0 se x = y = 0 ed x&nbsp;&or;&nbsp;y = 1 altrimenti.<br>
+    - <strong>"implication"</strong> (implicazione materiale)
+    denotata x&rarr;y, pu&ograve; essere descritta come &not;&nbsp;x&nbsp;&or;&nbsp;y.
+    Se x &egrave; vero allora x &rarr; y prende il medesimo valore di y.
+    Se x &egrave; falso allora il valore di y pu&ograve; essere ignorato; l'operazione deve comunque restituire qualche valore
+    di verit&agrave; e cis ono solo due possibili scelte, dunque il valore di ritorno &egrave; quello che
+    implica di meno, cio&egrave; vero.<br>
+    - <strong>"exclusive"</strong> (disgiunzione esclusiva)
+    denotata x&nbsp;&oplus;&nbsp;y, pu&ograve; essere descritta come (x&nbsp;&or;&nbsp;y)&and;&nbsp;&not;&nbsp;(x&nbsp;&and;&nbsp;y).
+    Esclude la possibilit&agrave; che x ed y siano entrambi veri. Definita in termini aritmetici &egrave; la
+    addizione modulo 2, per la quale 1 + 1 = 0.<br>
+    - <strong>"equivalence"</strong> (equivalenza)
+    denotata x&nbsp;&equiv;&nbsp;y, pu&ograve; essere descritta come &not;&nbsp;(x&nbsp;&oplus;&nbsp;y).
+    &Egrave; vera solo quando x ed y hanno lo stesso valore.<br>
+
+</p>
+
+<p>
+    Ecco la tabella di verit&agrave; per queste operazioni:
+</p>
+<div style="text-align: center;">
+<pre>
+ x | y | x&and;y | x&or;y | x&rarr;y | x&oplus;y | x&equiv;y |
+--------------------------------------
+ 0 | 0 |  0  |  0  |  1  |  0  |  1  |
+ 1 | 0 |  0  |  1  |  0  |  1  |  0  |
+ 0 | 1 |  0  |  1  |  1  |  1  |  0  |
+ 1 | 1 |  1  |  1  |  1  |  0  |  1  |
+--------------------------------------
+</pre>
+</div>
+
+<p>
+    Ti vengono dati due valori booleani <strong>x</strong> ed <strong>y</strong> come 1 o 0 e ti viene dato il
+    nome di una delle operazioni come descritto in precedenza.
+    Devi calcolare il valore e restituirlo come 1 o 0.
+</p>
+<p>
+    <strong>Input: </strong> Tre argomenti. X ed Y come 0 o 1. Il nome di un'operazione come una stringa.
+</p>
+
+<p>
+    <strong>Output: </strong> Il risultato come 1 o 0.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Esempio:</strong>
+    </p>
+    <pre class="brush: python">
+boolean(1, 0, "conjunction") == 0
+boolean(0, 1, "exclusive") == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Come si usa: </strong>
+    Qui imparerai come si lavora con valori ed operatori booleani.
+    Potrai anche pensare a come i numeri possano corrispondere a valori booleani.
+</p>
+
+<p>
+    <strong>Prerequisiti:</strong>
+    x in (0, 1)<br>
+    y in (0, 1)<br>
+    operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+</p>
