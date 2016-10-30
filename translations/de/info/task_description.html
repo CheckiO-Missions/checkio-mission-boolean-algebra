@@ -1,27 +1,28 @@
 <p>
-    In der Mathematik und mathematischer Logik, ist die <a href="https://de.wikipedia.org/wiki/Boolesche_Algebra">boolesche Algebra</a>
+    In der Mathematik und der mathematischen Logik ist die <a href="https://de.wikipedia.org/wiki/Boolesche_Algebra">boolesche Algebra</a>
     eine spezielle algebraische Struktur, welche die Grundlage für den Entwurf von elektronischen Schaltungen bis hin 
     zu Computern darstellt. Sie kennt nur die Zustände wahr oder falsch, die den Zuständen "Strom fliesst" 
     und "Strom fliesst nicht" in einem Schaltkreis entsprechen, typischerweise mit 1 respektiv 0 dargestellt.
     Im Unterschied zur elementaren Algebra, deren Variablen Werte als Zahlen besitzen mit den Grundoperationen Addition und
-    Multiplikation, sind die Grundoperationen der boolschen Algebra die Konjunktion (∧), Disjunktion (∨) und Negation (¬).
+    Multiplikation, sind die Grundoperationen der booleschen Algebra die Konjunktion (∧, gesprochen UND), 
+    Disjunktion (∨, gesprochen ODER) und Negation (¬, gesprochen NICHT).
 </p>
 
 <p>
-    In dieser Mission kannst Du einige der boolesche Operationen implementieren:<br>
-    - <strong>"Konjunktion"</strong>
-    Ausdruck x&nbsp;∧&nbsp;y, es ist x&nbsp;∧&nbsp;y = 1 nur wenn x = y = 1, andernfalls x&nbsp;∧&nbsp;y = 0.<br>
-    - <strong>"Disjunktion"</strong>
-    Aussdruck x&nbsp;∨&nbsp;y, es ist x&nbsp;∨&nbsp;y = 0 nur wenn x = y = 0, andernfalls x&nbsp;∨&nbsp;y = 1.<br>
-    - <strong>"Implikation"</strong> (materiale Implikation)
-    Ausdruck x&rarr;y kann auch als ¬&nbsp;x&nbsp;∨&nbsp;y geschrieben werden.
+    In dieser Mission sollst Du die folgenden booleschen Operationen implementieren:<br>
+    - <strong>"conjunction"</strong>(deutsch: Konjunktion)
+    Schreibweise x&nbsp;∧&nbsp;y, es gilt x&nbsp;∧&nbsp;y = 1 nur wenn x = y = 1, andernfalls x&nbsp;∧&nbsp;y = 0.<br>
+    - <strong>disjunction"</strong>(deutsch: Disjunktion)
+    Schreibweise x&nbsp;∨&nbsp;y, es gilt x&nbsp;∨&nbsp;y = 0 nur wenn x = y = 0, andernfalls x&nbsp;∨&nbsp;y = 1.<br>
+    - <strong>"implication"</strong> (deutsch: materiale Implikation)
+    Schreibweise x&rarr;y kann auch als ¬&nbsp;x&nbsp;∨&nbsp;y geschrieben werden.
     Wenn x wahr ist, dann muss für x → y = 1 auch y wahr sein. Wenn aber x falsch ist, kann y ignoriert werden, und der Ausdruck ist immer wahr.<br>
-    - <strong>"ausschließende Disjunktion"</strong> (ausschließendes Oder)
-    Ausdruck x&nbsp;⊕&nbsp;y kann auch als (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y) geschrieben werden.
-    Schliesst die Möglichkeit von x und y aus. Als arithmetischer Ausdruck ist es eine Addition und Division von 2 mit Rest, 
+    - <strong>"exclusive"</strong>(deutsch: ausschließende Disjunktion, ausschließendes ODER)
+    Schreibweise x&nbsp;⊕&nbsp;y kann auch mit (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y) beschrieben werden.
+    Schliesst die Möglichkeit von x&nbsp;∧&nbsp;y aus. Als arithmetischer Ausdruck ist es eine Addition und Division von 2 mit Rest, 
     wobei 1 + 1 = 0 ist.<br>
-    - <strong>"Äquivalenz"</strong>(materiale Äquivalenz, Bikonditonal)
-    Ausdruck x&nbsp;≡&nbsp;y, kann auch als ¬&nbsp;(x&nbsp;⊕&nbsp;y) geschrieben werden.
+    - <strong>"equivalence"</strong>(deutsch: materiale Äquivalenz, Bikonditional)
+    Schreibweise x&nbsp;≡&nbsp;y, kann auch mit ¬&nbsp;(x&nbsp;⊕&nbsp;y) beschrieben werden.
     Ist nur dann wahr, wenn x und y den selben Zustand haben.<br>
 
 </p>
@@ -42,7 +43,7 @@
 </div>
 
 <p>
-    Du erhälst je einen booleschen Wert für <strong>x</strong> und <strong>y</strong> sowie eine der eben beschriebenen Operationen. 
+    Du erhältst je einen booleschen Wert für <strong>x</strong> und <strong>y</strong> sowie eine der eben beschriebenen Operationen. 
     Du musst den resultierenden Zustand berechnen und als 1 oder 0 zurückgeben.
 </p>
 <p>
@@ -56,7 +57,7 @@
 
 <div class="for_info_only">
     <p>
-        <strong>Beispiel:</strong>
+        <strong>Beispiele:</strong>
     </p>
     <pre class="brush: python">
 boolean(1, 0, "conjunction") == 0
@@ -66,13 +67,13 @@ boolean(0, 1, "exclusive") == 1
 
 <p class="for_info_only">
     <strong>Wozu das gut ist: </strong>
-    Du lernst die allen Arbeitsschritten eines Computers zugrundeliegenden booleschen Werte und Operationen kennen,
-    wie in diesem Artikel zu <a href="https://de.wikipedia.org/wiki/Logikgatter>Logikgatter</a> weiterführend beschrieben.
+    Du lernst die allen Arbeitsschritten eines Computers zugrunde liegenden booleschen Werte und Operationen kennen.
+    Aus diesem Artikel zu <a href="https://de.wikipedia.org/wiki/Logikgatter>Logikgatter</a> kannst Du sogar noch mehr dazu lernen.
     Sogar Zahlen wirst Du als boolesche Zustände interpretieren können.
 </p>
 
 <p>
-    <strong>Bedingung:</strong>
+    <strong>Bedingungen:</strong>
     x in (0, 1)<br>
     y in (0, 1)<br>
     operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
