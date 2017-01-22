@@ -1,0 +1,80 @@
+<p>
+    In der Mathematik und der mathematischen Logik ist die <a href="https://de.wikipedia.org/wiki/Boolesche_Algebra">boolesche Algebra</a>
+    eine spezielle algebraische Struktur, welche die Grundlage für den Entwurf von elektronischen Schaltungen bis hin 
+    zu Computern darstellt. Sie kennt nur die Zustände wahr oder falsch, die den Zuständen "Strom fliesst" 
+    und "Strom fliesst nicht" in einem Schaltkreis entsprechen, typischerweise mit 1 respektiv 0 dargestellt.
+    Im Unterschied zur elementaren Algebra, deren Variablen Werte als Zahlen besitzen mit den Grundoperationen Addition und
+    Multiplikation, sind die Grundoperationen der booleschen Algebra die Konjunktion (∧, gesprochen UND), 
+    Disjunktion (∨, gesprochen ODER) und Negation (¬, gesprochen NICHT).
+</p>
+
+<p>
+    In dieser Mission sollst Du die folgenden booleschen Operationen implementieren:<br>
+    - <strong>"conjunction"</strong>(deutsch: Konjunktion)
+    Schreibweise x&nbsp;∧&nbsp;y, es gilt x&nbsp;∧&nbsp;y = 1 nur wenn x = y = 1, andernfalls x&nbsp;∧&nbsp;y = 0.<br>
+    - <strong>disjunction"</strong>(deutsch: Disjunktion)
+    Schreibweise x&nbsp;∨&nbsp;y, es gilt x&nbsp;∨&nbsp;y = 0 nur wenn x = y = 0, andernfalls x&nbsp;∨&nbsp;y = 1.<br>
+    - <strong>"implication"</strong> (deutsch: materiale Implikation)
+    Schreibweise x&rarr;y kann auch als ¬&nbsp;x&nbsp;∨&nbsp;y geschrieben werden.
+    Wenn x wahr ist, dann muss für x → y = 1 auch y wahr sein. Wenn aber x falsch ist, kann y ignoriert werden, und der Ausdruck ist immer wahr.<br>
+    - <strong>"exclusive"</strong>(deutsch: ausschließende Disjunktion, ausschließendes ODER)
+    Schreibweise x&nbsp;⊕&nbsp;y kann auch mit (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y) beschrieben werden.
+    Schliesst die Möglichkeit von x&nbsp;∧&nbsp;y aus. Als arithmetischer Ausdruck ist es eine Addition und Division von 2 mit Rest, 
+    wobei 1 + 1 = 0 ist.<br>
+    - <strong>"equivalence"</strong>(deutsch: materiale Äquivalenz, Bikonditional)
+    Schreibweise x&nbsp;≡&nbsp;y, kann auch mit ¬&nbsp;(x&nbsp;⊕&nbsp;y) beschrieben werden.
+    Ist nur dann wahr, wenn x und y den selben Zustand haben.<br>
+
+</p>
+
+<p>
+   So sieht die Wahrheitstabelle für diese Operationen aus:
+</p>
+<div style="text-align: center;">
+<pre>
+ x | y | x∧y | x∨y | x→y | x⊕y | x≡y |
+--------------------------------------
+ 0 | 0 |  0  |  0  |  1  |  0  |  1  |
+ 1 | 0 |  0  |  1  |  0  |  1  |  0  |
+ 0 | 1 |  0  |  1  |  1  |  1  |  0  |
+ 1 | 1 |  1  |  1  |  1  |  0  |  1  |
+--------------------------------------
+</pre>
+</div>
+
+<p>
+    Du erhältst je einen booleschen Wert für <strong>x</strong> und <strong>y</strong> sowie eine der eben beschriebenen Operationen. 
+    Du musst den resultierenden Zustand berechnen und als 1 oder 0 zurückgeben.
+</p>
+<p>
+    <strong>Eingabe: </strong> Drei Argumente. x und y als 0 oder 1. Der Name der Operation als String.
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Das Ergebnis als 1 oder 0.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+    <pre class="brush: python">
+boolean(1, 0, "conjunction") == 0
+boolean(0, 1, "exclusive") == 1
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu das gut ist: </strong>
+    Du lernst die allen Arbeitsschritten eines Computers zugrunde liegenden booleschen Werte und Operationen kennen.
+    Aus diesem Artikel zu <a href="https://de.wikipedia.org/wiki/Logikgatter>Logikgatter</a> kannst Du sogar noch mehr dazu lernen.
+    Sogar Zahlen wirst Du als boolesche Zustände interpretieren können.
+</p>
+
+<p>
+    <strong>Bedingungen:</strong>
+    x in (0, 1)<br>
+    y in (0, 1)<br>
+    operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+</p>
