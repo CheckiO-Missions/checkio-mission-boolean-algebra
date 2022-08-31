@@ -59,17 +59,7 @@
     <p>
         <strong>Beispiele:</strong>
     </p>
-    {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">
-boolean(1, 0, "conjunction") == 0
-boolean(0, 1, "exclusive") == 1
-</pre>
-{% else %}
-<pre class="brush: python">
-boolean(1, 0, "conjunction") == 0
-boolean(0, 1, "exclusive") == 1
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
