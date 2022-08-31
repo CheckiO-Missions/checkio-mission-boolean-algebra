@@ -2,7 +2,9 @@
 {% block env %}import assert from "assert";{% endblock env %}
 
 {% block start %}
-function boolean(x: number, y: number, action: string): number {
+OPERATION_NAMES = ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+
+function boolean(x: boolean, y: boolean, action: string): boolean {
     // your code here
     return 0;
 }
