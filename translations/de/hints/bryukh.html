@@ -1,10 +1,10 @@
 <body data-author="bryukh">
 <div class="question-answer">
     <div class="question">
-        Ich habe keine Idee wie ich mit der Lösung anfangen soll.
+        Ich habe keine Ahnung, wie ich mit der Lösung dieser Mission beginnen soll
     </div>
     <div class="answer">
-        Python hat keine "switch" Anweisung, aber Du kannst eine "if-else if" Konstruktion aufbauen.
+        In Python gibt es keine "switch"-Anweisung, also können Sie die "if-else if"-Konstruktion verwenden.
 <pre class="brush: python">
 if cond1:
     do1...
@@ -20,17 +20,17 @@ else:
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich brauche etwas Hilfe um weiter zu kommen.
+        Ich brauche Hilfe, um mit der Aufgabe fortzufahren
     </div>
     <div class="answer">
-        Die ersten zwei Operationen sind einfach.
+        Die ersten beiden Operationen sind einfach.
 <pre>
-# Konjunktion
-# x und y
+# conjunction
+# x and y
 1 and 0 == 0
 1 and 1 == 1
-# Disjunktion
-# x oder y
+# disjunction
+# x or y
 1 or 0 == 1
 0 or 0 == 1
     </pre>
@@ -38,12 +38,12 @@ else:
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich hab's fast. Bitte hilf mir!
+        Ich bin auf halbem Wege steckengeblieben. Ich brauche Hilfe!
     </div>
     <div class="answer">
-        Ein "ausschließendes oder" oder auch "XOR", bringt Python schon mit. 
+        "Exklusiv oder" oder "XOR" ist bereits in Python implementiert.
 <pre class="brush: python">
-# ausschließend
+# exclusive
 # x ^ y
 1 ^ 1 == 0
 1 ^ 0 == 1
@@ -52,13 +52,13 @@ else:
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich komme nicht weiter. Nur einen kleinen Tip!
+        Ich stecke fest. Ich brauche einen kleinen Hinweis.
     </div>
     <div class="answer">
-        Materiale Implikation kann in einfachen Schritten beschrieben werden. 
+        Die materielle Implikation kann mit einfachen Operationen beschrieben werden.
 <pre class="brush: python">
-# Implikation
-# nicht x oder y
+# implication
+# not x or y
 not 1 or 0 == 0
 not 0 or 0 == 1
     </pre>
@@ -66,15 +66,35 @@ not 0 or 0 == 1
 </div>
 <div class="question-answer">
     <div class="question">
-        Ich habe alles versucht. Nichts bringt mich weiter. SOS.
+        Ich habe alles Mögliche versucht. Nichts funktioniert. SOS
     </div>
     <div class="answer">
-        (materiale) Äquivalenz kann mit XOR beschrieben werden.
+        Äquivalenz kann mit XOR beschrieben werden.
 <pre class="brush: python">
-# Äquivalenz
-# nicht (x ^ y)
+# equivalence
+# not (x ^ y)
 not (1 ^ 1) == 1
 not (1 ^ 0) == 0
+    </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Wie sieht der endgültige Code aus?
+    </div>
+    <div class="answer">
+<pre class="brush: python">
+def boolean(x: bool, y: bool, op: str) -> bool:
+    if op == "conjunction":
+        return x and y
+    if op == "disjunction":
+        return x or y
+    if op == "implication":
+        return not (x) or y
+    if op == "exclusive":
+        return x ^ y
+    if op == "equivalence":
+        return not (x ^ y)
     </pre>
     </div>
 </div>

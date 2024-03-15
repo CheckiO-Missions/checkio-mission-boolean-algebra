@@ -1,34 +1,35 @@
 <p>
-    In der Mathematik und der mathematischen Logik ist die <a href="https://de.wikipedia.org/wiki/Boolesche_Algebra">boolesche Algebra</a>
-    eine spezielle algebraische Struktur, welche die Grundlage für den Entwurf von elektronischen Schaltungen bis hin 
-    zu Computern darstellt. Sie kennt nur die Zustände wahr oder falsch, die den Zuständen "Strom fliesst" 
-    und "Strom fliesst nicht" in einem Schaltkreis entsprechen, typischerweise mit 1 respektiv 0 dargestellt.
-    Im Unterschied zur elementaren Algebra, deren Variablen Werte als Zahlen besitzen mit den Grundoperationen Addition und
-    Multiplikation, sind die Grundoperationen der booleschen Algebra die Konjunktion (∧, gesprochen UND), 
-    Disjunktion (∨, gesprochen ODER) und Negation (¬, gesprochen NICHT).
+    In Mathematik und mathematischer Logik,
+   <a href="http://en.wikipedia.org/wiki/Boolean_algebra#Basic_operations">Boolean algebra</a>
+    ein Teilbereich der Algebra, in dem die Werte der Variablen wahr oder falsch sind, typischerweise mit 1 oder 0 bezeichnet
+    bezeichnet werden. Im Gegensatz zur elementaren Algebra, in der die Werte der Variablen Zahlen sind und die wichtigsten Operationen
+    addition und Multiplikation sind, sind die Hauptoperationen der Booleschen Algebra die Konjunktion (bezeichnet mit ∧), die
+    disjunktion (bezeichnet als ∨) und die Negation (bezeichnet als ¬).
 </p>
 
 <p>
-    In dieser Mission sollst Du die folgenden booleschen Operationen implementieren:<br>
-    - <strong>"conjunction"</strong>(deutsch: Konjunktion)
-    Schreibweise x&nbsp;∧&nbsp;y, es gilt x&nbsp;∧&nbsp;y = 1 nur wenn x = y = 1, andernfalls x&nbsp;∧&nbsp;y = 0.<br>
-    - <strong>disjunction"</strong>(deutsch: Disjunktion)
-    Schreibweise x&nbsp;∨&nbsp;y, es gilt x&nbsp;∨&nbsp;y = 0 nur wenn x = y = 0, andernfalls x&nbsp;∨&nbsp;y = 1.<br>
-    - <strong>"implication"</strong> (deutsch: materiale Implikation)
-    Schreibweise x&rarr;y kann auch als ¬&nbsp;x&nbsp;∨&nbsp;y geschrieben werden.
-    Wenn x wahr ist, dann muss für x → y = 1 auch y wahr sein. Wenn aber x falsch ist, kann y ignoriert werden, und der Ausdruck ist immer wahr.<br>
-    - <strong>"exclusive"</strong>(deutsch: ausschließende Disjunktion, ausschließendes ODER)
-    Schreibweise x&nbsp;⊕&nbsp;y kann auch mit (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y) beschrieben werden.
-    Schliesst die Möglichkeit von x&nbsp;∧&nbsp;y aus. Als arithmetischer Ausdruck ist es eine Addition und Division von 2 mit Rest, 
-    wobei 1 + 1 = 0 ist.<br>
-    - <strong>"equivalence"</strong>(deutsch: materiale Äquivalenz, Bikonditional)
-    Schreibweise x&nbsp;≡&nbsp;y, kann auch mit ¬&nbsp;(x&nbsp;⊕&nbsp;y) beschrieben werden.
-    Ist nur dann wahr, wenn x und y den selben Zustand haben.<br>
+    In dieser Aufgabe sollen Sie einige boolesche Operationen implementieren:<br>
+    - <strong>"Konjunktion"</strong>
+    bezeichnet mit x ∧ y, erfüllt x ∧ y = 1, wenn x = y = 1 und x ∧ y = 0 sonst.<br>
+    - <strong>"Disjunktion"</strong>
+    bezeichnet mit x ∨ y, erfüllt x ∨ y = 0, wenn x = y = 0 und x ∨ y = 1 andernfalls.<br>
+    - <strong>"Implikation"</strong> (materielle Implikation)
+    wird mit x&rarr;y bezeichnet und kann als ¬ x ∨ y beschrieben werden.
+    Wenn x wahr ist, dann wird der Wert von x → y als der Wert von y angenommen.
+    Wenn x jedoch falsch ist, kann der Wert von y ignoriert werden; die Operation muss jedoch einen
+    die Operation muss jedoch einen Wahrheitswert zurückgeben und es gibt nur zwei Möglichkeiten, also ist der Rückgabewert derjenige, der weniger bedeutet, nämlich wahr.<br>
+    - <strong>"exklusiv"</strong> (exklusiv oder)
+    wird mit x ⊕ y bezeichnet und kann als (x ∨ y)∧ ¬ (x ∧ y) beschrieben werden.
+    Es schließt die Möglichkeit aus, dass sowohl x als auch y möglich sind. Arithmetisch definiert ist es die Addition mod 2, wobei 1 + 1 =
+    0.<br>
+    - <strong>"Gleichwertigkeit"</strong>
+    wird mit x ≡ y bezeichnet und kann als ¬ (x ⊕ y) beschrieben werden.
+    Es ist nur wahr, wenn x und y den gleichen Wert haben.<br>
 
 </p>
 
 <p>
-   So sieht die Wahrheitstabelle für diese Operationen aus:
+    Hier sehen Sie die Wahrheitstabelle für diese Operationen:
 </p>
 <div style="text-align: center;">
 <pre>
@@ -43,35 +44,34 @@
 </div>
 
 <p>
-    Du erhältst je einen booleschen Wert für <strong>x</strong> und <strong>y</strong> sowie eine der eben beschriebenen Operationen. 
-    Du musst den resultierenden Zustand berechnen und als 1 oder 0 zurückgeben.
+    Sie erhalten zwei boolesche Werte <strong>x</strong> und <strong>y</strong> als 1 oder 0 und Sie erhalten eine Operation
+    name wie oben beschrieben. Sie sollen den Wert berechnen und ihn als 1 oder 0 zurückgeben.
 </p>
 <p>
-    <strong>Eingabe: </strong> Drei Argumente. x und y als 0 oder 1. Der Name der Operation als String.
+   <strong>Eingabe: </strong> Drei Argumente. X und Y als 0 oder 1. Ein Operationsname als String.
 </p>
 
 <p>
-    <strong>Ausgabe: </strong> Das Ergebnis als 1 oder 0.
+   <strong>Ausgabe: </strong> Das Ergebnis als 1 oder 0.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Beispiele:</strong>
+        <strong>Beispiel:</strong>
     </p>
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>Wozu das gut ist: </strong>
-    Du lernst die allen Arbeitsschritten eines Computers zugrunde liegenden booleschen Werte und Operationen kennen.
-    Aus diesem Artikel zu <a href="https://de.wikipedia.org/wiki/Logikgatter>Logikgatter</a> kannst Du sogar noch mehr dazu lernen.
-    Sogar Zahlen wirst Du als boolesche Zustände interpretieren können.
+   <strong>Wie es verwendet wird: </strong>
+    Hier lernen Sie, wie Sie mit booleschen Werten und Operatoren arbeiten. Sie können sogar über Zahlen als Boolesche Werte nachdenken.
+
 </p>
 
 <p>
-    <strong>Bedingungen:</strong>
+   <strong>Vorbedingung:</strong>
     x in (0, 1)<br>
     y in (0, 1)<br>
-    operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+    operation in ("Konjunktion", "Disjunktion", "Implikation", "Exklusiv", "Äquivalenz")
 </p>
